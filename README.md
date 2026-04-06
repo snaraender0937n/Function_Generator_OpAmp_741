@@ -84,16 +84,23 @@ This project is also implemented in **Tinkercad** for simulation and verificatio
 ## 🔹 Output Waveforms
 
 ### Sine Wave
-
-![Sine Wave](images/sine_wave.png)
+![Sine](images/sine_wave.png)
 
 ### Square Wave
-
-![Square Wave](images/square_wave.png)
+![Square](images/square_wave.png)
 
 ### Triangle Wave
+![Triangle](images/triangle_wave.png)
 
-![Triangle Wave](images/triangle_wave.png)
+### De-amplified Outputs
+- Sine (attenuated)
+![Sine Deamp](images/sine_wave_deamplify.png)
+
+- Square (attenuated)
+![Square Deamp](images/square_wave_deamplify.png)
+
+- Triangle (attenuated)
+![Triangle Deamp](images/triangle_wave_deamplify.png)
 
 ---
 
