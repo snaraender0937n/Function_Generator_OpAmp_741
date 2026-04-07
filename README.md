@@ -1,8 +1,8 @@
-# Analog Function Generator using Op-Amps (741)
+# 🔷 Analog Function Generator using Op-Amps (μA741)
 
 ## 📌 Overview
 
-This project implements an analog function generator capable of producing **sine, square, and triangular waveforms** using operational amplifiers. The design includes a dual power supply and multiple signal processing stages.
+This project presents the design and implementation of an **analog function generator** capable of producing **sine, square, and triangular waveforms** using μA741 operational amplifiers. The system includes a regulated dual power supply and multiple signal processing stages to generate and shape waveforms.
 
 ---
 
@@ -15,73 +15,71 @@ This project implements an analog function generator capable of producing **sine
 ## 🔹 Working Principle
 
 ### 1. Power Supply Stage
-
-* 230V AC is stepped down using a transformer (12-0-12)
-* Full-wave rectifier converts AC to DC
-* 1000µF capacitor filters ripple
-* Voltage regulators (LM7812, LM7912) provide stable ±12V
+- 230V AC input is stepped down using a **12-0-12 center-tapped transformer**
+- Full-wave rectifier converts AC to DC
+- Capacitors (1000µF) filter ripple
+- Voltage regulators (**LM7812 and LM7912**) provide stable **±12V DC supply**
 
 ---
 
 ### 2. Wien Bridge Oscillator (Sine Wave)
-
-* Generates sine wave using RC network
-* Frequency controlled using potentiometer
+- Generates a low-distortion sine wave
+- Frequency controlled using RC network and potentiometer
 
 ---
 
 ### 3. Comparator (Square Wave)
-
-* Converts sine wave into square wave
+- Converts sine wave into square wave using op-amp comparator
 
 ---
 
 ### 4. Integrator (Triangle Wave)
-
-* Converts square wave into triangular wave
+- Converts square wave into triangular waveform using op-amp integrator
 
 ---
 
 ### 5. Output Selection
-
-* Switch used to select waveform output
+- A switch is used to select between sine, square, and triangle outputs
+- Final stage includes buffering and amplitude control
 
 ---
 
 ## 🔹 Circuit Diagram
 
-![Circuit](simulation/function_generator.png)
+![Circuit Diagram](images/circuit_diagram.png)
 
 ---
 
 ## 🔹 Hardware Implementation
 
 ### Hardware Setup
-![Hardware](images/circuit_diagram.png)
+![Hardware](images/hardware_setup.jpg)
 
-The circuit is implemented using μA741 op-amps on a breadboard. A dual power supply (±12V) is provided using a transformer, rectifier, and voltage regulators. The setup generates sine, square, and triangular waveforms, which are observed using an oscilloscope.
+The circuit is implemented on a breadboard using μA741 op-amps. A regulated dual power supply (±12V) is generated using a transformer, rectifier, and voltage regulators. The output waveforms are verified using an oscilloscope.
 
 ---
 
 ## 🔹 Simulation Results
 
-### Circuit (Tinkercad)
-![Circuit](simulation/rectified_ouput.png)
+### Power Supply (LTspice)
+![Rectified Output](simulation/rectified_ouput.png)  
+![Regulated Output](simulation/regulated_output.png)
 
-![Circuit](simulation/regulated_output.png)
+### Function Generator Circuit (Tinkercad)
+![Circuit Simulation](simulation/function_generator.png)
 
-![Circuit](simulation/function_generator.png)
+---
 
 ### Output Waveforms
 
 #### Sine Wave
-![Sine](simulation/sine_simulation.png)
+![Sine Wave](simulation/sine_simulation.png)
 
 #### Square Wave
-![Square](simulation/square_simulation.png)
+![Square Wave](simulation/square_simulation.png)
 
 #### Triangle Wave
-![Triangle](simulation/triangle_simulation.png)
+![Triangle Wave](simulation/triangle_simulation.png)
 
 ---
 
@@ -91,22 +89,40 @@ The circuit is implemented using μA741 op-amps on a breadboard. A dual power su
 
 ---
 
-## 🔹 Features
+## 🔹 Results
 
-* Generates sine, square, and triangle waves
-* Adjustable frequency
-* Dual power supply (±12V)
-* Real-time waveform visualization
+- Sine wave frequency ≈ **1.4 kHz**
+- Square wave amplitude ≈ **±12V**
+- Triangle wave generated successfully using integrator
+- Stable output observed in both simulation and hardware
 
 ---
 
-## 🔹 Tools Used
+## 🔹 Features
 
-* LTspice (Power supply simulation)
-* Tinkercad (Circuit simulation)
+- Generates **three waveform types**: sine, square, triangle  
+- Adjustable frequency using potentiometer  
+- Dual regulated power supply (±12V)  
+- Real-time waveform verification using oscilloscope  
+
+---
+
+## 🔹 Tools & Technologies
+
+- **LTspice** – Power supply simulation  
+- **Tinkercad** – Circuit simulation  
+- **Breadboard Implementation** – Hardware testing  
+
+---
+
+## 🔹 Applications
+
+- Signal generation for testing circuits  
+- Educational demonstrations of waveform generation  
+- Analog electronics experiments  
 
 ---
 
 ## 🔹 Author
 
-Naraender
+**Naraender**
