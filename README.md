@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 
-This project implements an analog function generator capable of producing **sine, square, and triangular waveforms** using operational amplifiers (IC 741). The system uses a dual power supply derived from AC mains and multiple signal processing stages including oscillator, comparator, and integrator circuits.
+This project implements an analog function generator capable of producing **sine, square, and triangular waveforms** using operational amplifiers. The design includes a dual power supply and multiple signal processing stages.
 
 ---
 
@@ -16,124 +16,91 @@ This project implements an analog function generator capable of producing **sine
 
 ### 1. Power Supply Stage
 
-* 230V AC is stepped down using a **12-0-12 transformer**
-* Full bridge rectifier converts AC to DC
-* A **1000µF capacitor** is used to filter ripple
-* Output obtained: **±18V DC**
-* Voltage regulators (**7812, 7912**) provide stable **+12V and -12V**
+* 230V AC is stepped down using a transformer (12-0-12)
+* Full-wave rectifier converts AC to DC
+* 1000µF capacitor filters ripple
+* Voltage regulators (LM7812, LM7912) provide stable ±12V
 
 ---
 
-### 2. Wien Bridge Oscillator (Sine Wave Generation)
+### 2. Wien Bridge Oscillator (Sine Wave)
 
-* Op-amp **741** configured as a Wien bridge oscillator
-* Capacitor value: **0.1µF (104)**
-* Resistor: **1.5kΩ + potentiometer (frequency control)**
-* Produces a **stable sine wave**
+* Generates sine wave using RC network
+* Frequency controlled using potentiometer
 
 ---
 
-### 3. Comparator (Square Wave Generation)
+### 3. Comparator (Square Wave)
 
-* Sine wave output is fed into a comparator
-* Output is converted into a **square wave**
+* Converts sine wave into square wave
 
 ---
 
-### 4. Integrator (Triangle Wave Generation)
+### 4. Integrator (Triangle Wave)
 
-* Square wave is passed through an integrator circuit
-* Output becomes a **triangular wave**
+* Converts square wave into triangular wave
 
 ---
 
 ### 5. Output Selection
 
-* A switch is used to select one of the outputs:
-
-  * Sine wave
-  * Square wave
-  * Triangle wave
-
----
-
-### 6. Buffer and Output Stage
-
-* Buffer circuit is used to isolate output
-* Amplitude can be adjusted using a potentiometer
-* Final stage can also act as attenuation (de-amplification)
+* Switch used to select waveform output
 
 ---
 
 ## 🔹 Circuit Diagram
 
-![Circuit Diagram](images/circuit_diagram.png)
+![Circuit](images/circuit_diagram.png)
 
 ---
 
-## 🔹 Simulation
+## 🔹 Hardware Implementation
 
-This project is also implemented in **Tinkercad** for simulation and verification.
-
-* Simulation link available in: `simulation/thinkercad_link.txt`
-
-![Simulation](simulation/simulation_screenshot.png)
+![Hardware](images/hardware_setup.jpg)
 
 ---
 
-## 🔹 Output Waveforms
+## 🔹 Simulation Results
 
-### Sine Wave
-![Sine](images/sine_wave.png)
+### Circuit (Tinkercad)
 
-### Square Wave
-![Square](images/square_wave.png)
+![Circuit](simulation/simulation_screenshot.png)
 
-### Triangle Wave
-![Triangle](images/triangle_wave.png)
+### Output Waveforms
 
-### De-amplified Outputs
-- Sine (attenuated)
-![Sine Deamp](images/sine_wave_deamplify.png)
+**Sine Wave**
+![Sine](simulation/sine_wave.png)
 
-- Square (attenuated)
-![Square Deamp](images/square_wave_deamplify.png)
+**Square Wave**
+![Square](simulation/square_wave.png)
 
-- Triangle (attenuated)
-![Triangle Deamp](images/triangle_wave_deamplify.png)
+**Triangle Wave**
+![Triangle](simulation/triangle_wave.png)
 
 ---
 
-## 🔹 Components Used
+## 🔹 Simulation Link
 
-* Transformer (12-0-12)
-* Bridge Rectifier (Diodes)
-* Capacitors (1000µF, 0.1µF)
-* Voltage Regulators (7812, 7912)
-* Operational Amplifier (IC 741)
-* Resistors (1.5kΩ and others)
-* Potentiometers (frequency & amplitude control)
-* Switch (waveform selection)
-
----
-
-## 🔹 Applications
-
-* Signal generation for testing circuits
-* Electronics laboratory experiments
-* Communication system testing
+[Tinkercad Simulation](https://www.tinkercad.com/things/your-link)
 
 ---
 
 ## 🔹 Features
 
-* Generates three types of waveforms
+* Generates sine, square, and triangle waves
 * Adjustable frequency
-* Adjustable amplitude
-* Dual power supply design
+* Dual power supply (±12V)
+* Real-time waveform visualization
+
+---
+
+## 🔹 Tools Used
+
+* LTspice (Power supply simulation)
+* Tinkercad (Circuit simulation)
 
 ---
 
 ## 🔹 Author
 
-**Naraender**
+Naraender
