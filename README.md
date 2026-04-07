@@ -56,32 +56,34 @@ This project implements an analog function generator capable of producing **sine
 
 ## 🔹 Hardware Implementation
 
+### Hardware Setup
 ![Hardware](images/hardware_setup.jpg)
+
+The circuit is implemented using μA741 op-amps on a breadboard. A dual power supply (±12V) is provided using a transformer, rectifier, and voltage regulators. The setup generates sine, square, and triangular waveforms, which are observed using an oscilloscope.
 
 ---
 
 ## 🔹 Simulation Results
 
 ### Circuit (Tinkercad)
-
 ![Circuit](simulation/simulation_screenshot.png)
 
 ### Output Waveforms
 
-**Sine Wave**
+#### Sine Wave
 ![Sine](simulation/sine_wave.png)
 
-**Square Wave**
+#### Square Wave
 ![Square](simulation/square_wave.png)
 
-**Triangle Wave**
+#### Triangle Wave
 ![Triangle](simulation/triangle_wave.png)
 
 ---
 
 ## 🔹 Simulation Link
 
-[Tinkercad Simulation](https://www.tinkercad.com/things/your-link)
+🔗 [Open Tinkercad Simulation](https://www.tinkercad.com/things/32il4N5kGeb-function-generator)
 
 ---
 
