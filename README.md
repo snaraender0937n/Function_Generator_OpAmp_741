@@ -50,15 +50,6 @@ This project presents the design and implementation of an **analog function gene
 
 ---
 
-## 🔹 Hardware Implementation
-
-### Hardware Setup
-![Hardware](images/hardware_setup.jpg)
-
-The circuit is implemented on a breadboard using μA741 op-amps. A regulated dual power supply (±12V) is generated using a transformer, rectifier, and voltage regulators. The output waveforms are verified using an oscilloscope.
-
----
-
 ## 🔹 Simulation Results
 
 ### Power Supply (LTspice)
